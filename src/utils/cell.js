@@ -1,5 +1,4 @@
 export function generateCells(width, height) {
-    debugger;
     return [...Array(width * height)]
         .fill(null)
         .map(() => ({
@@ -124,7 +123,6 @@ export function generateNewGameBoard(cells, options, setCells) {
         const rawCells = generateCells(options.width, options.height);
         const {cellsWithMines, mineFields} = addMines(rawCells, options);
         const readyMineField = addCounts(cellsWithMines, mineFields, options);
-        console.log(readyMineField.length)
         setCells(readyMineField);
     }
 }

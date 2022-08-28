@@ -11,7 +11,7 @@ function App() {
     let [options, setOptions] = useState({
         width: 10,
         height: 10,
-        minesCount: 2,
+        minesCount: 10,
         totalCells: 100,
     });
     let [cells, setCells] = useState([]);

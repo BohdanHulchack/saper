@@ -56,9 +56,9 @@ function getIdsToCheckAround(cellIndex, cellsCount, width) {
 
     let result = [].concat(rightWing, centerWing, leftWing);
 
-    if ((cellIndex + 1) % width === 0) {
+    if ((cellIndex + 1) % width === 0 && cellIndex !== 0) {
         result = [].concat(leftWing, centerWing);
-    } else if((cellIndex + 1) % width === 1 && cellIndex !== 0) {
+    } else if((cellIndex + 1) % width === 1 || cellIndex === 0) {
         result = [].concat(rightWing, centerWing);
     }
 

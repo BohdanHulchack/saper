@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+body {
+    display: block;
+    background: linear-gradient(rgb(131, 23, 71), rgb(40, 0, 0));
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+    margin: 15px 20px;
+    border: 2px solid darkkhaki;
+    border-radius: 3px;
+    padding: 3px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* header */
+.sapper-header {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.sapper-header h1 {
+    color: antiquewhite;
+    margin-left: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sapper-header button {
+    height: 40px;
+    margin-right: 50px
 }
 
-.App-link {
-  color: #61dafb;
+/* bg */
+.sapper-bg {
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sapper-canvas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+/* cells */
+.cell {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    border-radius: 15px;
+}
+.cell-count {
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: antiquewhite;
+}
+.cell-covered {
+    background-color: gray;
+}
+.cell-mine {
+    background-color: red;
+}
+.cell-blank {
+    background-color: darkkhaki;
+}
+
+
+/* popups */
+
+.sapper-popup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: aliceblue;
+    border: 5px solid darkkhaki;
+    border-radius: 15px;
+    padding: 30px 30px 10px 30px;
+}
+
+.sapper-popup h2 {
+    margin: 0 20px;
+}
+
+.sapper-popup p {
+    width: 500px;
+    padding: 10px 20px 0;
+    line-height: 20px;
+}
+
+.sapper-popup button {
+    margin: 15px 20px;
+    border: 2px solid darkkhaki;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.sapper-popup label, .sapper-popup input {
+    display: block;
+    margin: 5px 20px;
 }
